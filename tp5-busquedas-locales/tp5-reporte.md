@@ -48,5 +48,8 @@ ADJUNTADO EN UN UNICO ARCHIVO CSV.
 [datos.csv](https://github.com/Mauro-1998/ia-uncuyo-2021/files/7182092/datos.csv)
 
 ## Ejercicio B
+
+
+
 ## Ejercicio C
 El algoritmo más adecuado es el algoritmo genético, ya que es el algoritmo que provee más soluciones y el tiempo requerido para cada solución es el menor de los 3 algoritmos, es decir, logra una mayor eficiencia. 
