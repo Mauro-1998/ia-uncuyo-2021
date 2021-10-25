@@ -70,6 +70,7 @@
 
     # summarize results
     confusionMatrix <- confusionMatrix(testSet$prediction,testSet$inclinacion_peligrosa)
+    confusionMatrix
 
 
 
