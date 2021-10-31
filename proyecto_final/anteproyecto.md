@@ -10,7 +10,7 @@
 
 # Descripción
 
-Explicación de la idea y de algunos conceptos previos
+## Explicación de la idea y de algunos conceptos previos
 
 Gracias a los grandes avances tecnológicos de los últimos años se ha revolucionado la actividad financiera, generando un nuevo concepto de dinero: las criptomonedas.
 Una criptomoneda es una moneda virtual creada como modelo de cambio alternativo al dinero tradicional.
@@ -25,49 +25,49 @@ Las Series Temporales tienen 2 características principales:
 El problema de predecir el precio de criptomonedas puede describirse como un problema de pronóstico de series temporales, donde la serie de datos cronológicamente indexados es el precio y el objetivo es extrapolar para predecir su comportamiento en el futuro.
 
 El análisis clásico de las series de tiempo, se basa en la suposición de que los valores que toma la variable de observación es la consecuencia de cuatro componentes, cuya actuación conjunta da como resultado los valores medidos, estas componentes son:
-    • Componente tendencia: Es el movimiento a largo plazo de la Serie Temporal. Es usual encontrarse con series temporales que presentan un movimiento sostenido en la misma dirección durante un amplio período de tiempo, con independencia de pequeñas oscilaciones al alza o a la baja.
 
+- Componente tendencia: Es el movimiento a largo plazo de la Serie Temporal. Es usual encontrarse con series temporales que presentan un movimiento sostenido en la misma dirección durante un amplio período de tiempo, con independencia de pequeñas oscilaciones al alza o a la baja. Podemos encontrarla bajo 2 enfoques:
+    - Ajuste de curvas: En primer lugar, se puede “ajustar” una curva suave que recoja el perfil de la serie, dando lugar a tendencias lineales, polinómicas, exponenciales, etc. Este planteamiento presenta la ventaja de proporcionar una ecuación analítica que permite extrapolar dicha tendencia a un futuro próximo, proporcionando una primera aproximación a la predicción de los valores de la serie. 
+Por el contrario, la elección de la forma funcional determina drásticamente dicha extrapolación, por lo que una mala elección se traduce directamente en la mala calidad de las predicciones. 
 
+    - Filtrado de series: En segundo lugar, se puede intentar eliminar de la serie las componentes no deseadas, “filtrando” los datos originales. Dentro de este amplio campo, los filtros más utilizados por su sencillez son los lineales, que presentan buenos resultados cuando se trata de calcular la tendencia o de hacer predicciones a corto plazo. 
 
-      Podemos encontrarla bajo 2 enfoques:
-        ◦ Ajuste de curvas: En primer lugar, se puede “ajustar” una curva suave que recoja el perfil de la serie, dando lugar a tendencias lineales, polinómicas, exponenciales, etc. Este planteamiento presenta la ventaja de proporcionar una ecuación analítica que permite extrapolar dicha tendencia a un futuro próximo, proporcionando una primera aproximación a la predicción de los valores de la serie. 
-          Por el contrario, la elección de la forma funcional determina drásticamente dicha extrapolación, por lo que una mala elección se traduce directamente en la mala calidad de las predicciones. 
-        ◦ Filtrado de series: En segundo lugar, se puede intentar eliminar de la serie las componentes no deseadas, “filtrando” los datos originales. Dentro de este amplio campo, los filtros más utilizados por su sencillez son los lineales, que presentan buenos resultados cuando se trata de calcular la tendencia o de hacer predicciones a corto plazo. 
+- Componente Estacional: Muchas series de tiempo presentan cierta periodicidad a lo largo del tiempo (por ejemplo, las ventas de una heladería aumenta con la llegada de la primavera y el verano). Estos efectos son fáciles de entender y se pueden medir explícitamente o incluso se pueden eliminar de la serie de datos, a este proceso se le llama des-estacionalización de la serie.
 
-    • Componente Estacional: Muchas series de tiempo presentan cierta periodicidad a lo largo del tiempo (por ejemplo, las ventas de una heladería aumenta con la llegada de la primavera y el verano). Estos efectos son fáciles de entender y se pueden medir explícitamente o incluso se pueden eliminar de la serie de datos, a este proceso se le llama des-estacionalización de la serie.
-
-    • Variación Cíclica: Estudia las oscilaciones producidas en un periodo de medio a largo plazo.
+- Variación Cíclica: Estudia las oscilaciones producidas en un periodo de medio a largo plazo.
       
-    • Ruido: Esta componente no responde a ningún patrón de comportamiento, sino que es el resultado de factores fortuitos o aleatorios que inciden de forma aislada en una serie de tiempo.
+- Ruido: Esta componente no responde a ningún patrón de comportamiento, sino que es el resultado de factores fortuitos o aleatorios que inciden de forma aislada en una serie de tiempo.
 
-Luego, nuestro modelo queda representado por la siguiente manera: XT = TT + ET + CT + εT donde:
-    • TT es la tendencia 
-    • ET  es la componente estacional
-    • CT es la variación cíclica (nótese que esta componente puede no existir)
-    • εT es la componente aleatoria o el “ruido”
+Luego, nuestro modelo queda representado por la siguiente manera: 
+
+        XT = TT + ET + CT + εT donde:
+        - TT es la tendencia 
+        - ET  es la componente estacional
+        - CT es la variación cíclica (nótese que esta componente puede no existir)
+        - εT es la componente aleatoria o el “ruido”
 
 Luego, existen métodos para descomponer las series temporales en sus componentes y poder analizar cada una de ellas por separado.
 
 
 
-Limitaciones del proyecto
+## Limitaciones del proyecto
 
-TEORÍA DEL CAMINO ALEATORIO
+### TEORÍA DEL CAMINO ALEATORIO
 
 La teoría del paseo aleatorio afirma que todo cambio, o evolución existente en los mercados financieros, no es medible y estimable. Ello se debe a la aleatoriedad. 
 Además señala que no es posible realizar predicciones fiables del precio de activos, estudiando únicamente su evolución pasada.
 
 
-LA ALEATORIEDAD DE LOS PRECIOS
+### LA ALEATORIEDAD DE LOS PRECIOS
 
 Según la teoría de paseo aleatorio, los precios de mercado se comportan de manera aleatoria y no dependiente de series temporales anteriores. Esto hace que su medición o estimación sea más complicada. Es por ello que esta metodología de estimación está más extendida en cálculos de evoluciones en el corto plazo, donde la aleatoriedad es menor que al pasar más tiempo y observar el largo plazo. Es importante destacar que la aleatoriedad de los precios se propone cuando los mercados son eficientes, ya que incluso la teoría del paseo aleatorio admite algunas ineficiencias de mercado.
 
-CRÍTICAS A LA TEORÍA DEL PASEO ALEATORIO
+### CRÍTICAS A LA TEORÍA DEL PASEO ALEATORIO
 Recientemente han aparecido otros puntos de vista que afirman que sí que es posible mejorar carteras de inversión y «ganar» al mercado, especialmente por la existencia de mercados no eficientes (con comportamientos no aleatorios al menos en el corto plazo).
 
 Los analistas técnicos argumentan que los humanos tendemos a comportarnos de la misma manera ante las mismas situaciones, por lo que ante situaciones idénticas (bajadas o subidas de precios), las reacciones serán las mismas y los movimientos de precios seguirán unos patrones.
 
-Formas de evaluación:
+### Formas de evaluación:
 
 - Predicciones a los 5, 10, 30 minutos; 1, 4, 8, 12, 24 horas.
 
