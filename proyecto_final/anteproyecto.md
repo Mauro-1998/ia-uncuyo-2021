@@ -109,3 +109,9 @@ Finalización estimada: 14 de Enero de 2022
 8. Escritura de informe final (7 días)
 
 9. Opcional: implementacion con deep learning.
+
+
+FUENTES: 
+https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/20471/1/tg-gonzalez-federico.pdf
+http://190.169.30.62/bitstream/10872/19752/1/PrincipalTEG.pdf
+https://eprints.ucm.es/id/eprint/50312/1/TFG%20definitivo.pdf
